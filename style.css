@@ -42,7 +42,39 @@ https://en.bem.info/methodology/quick-start/*/
 /*Sección Menu*/
 
 section.menu{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color:  rgb(37, 55, 70);
+    color: white;
+}
 
+header.menu__header {
+    display: flex;
+    align-items: center;
+    
+}
+
+.menu__icono {
+    height: 22px;
+}
+
+.menu__title {
+    margin-left: 1rem;
+}
+
+.menu__list {
+    display: flex;
+    justify-content: space-between;
+    
+}
+
+.menu__list__item {
+    margin-left: 1rem;    
+}
+
+.menu__list__item a {
+    color: white;    
 }
 
 /*Sección Title*/
