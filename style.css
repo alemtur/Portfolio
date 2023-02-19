@@ -80,7 +80,34 @@ header.menu__header {
 /*Sección Title*/
 
 section.title{
+    margin-top: 2rem;
+}
 
+.title__div {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+
+}
+
+.title__profile {
+    border-radius: 50%;
+}
+
+.title__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+   
+}
+
+.title__network {
+    display: flex;
+    padding-inline-start: 0px;
+}
+
+.title__network__item {
+    margin-right: 2rem;
 }
 
 /*Sección About*/
