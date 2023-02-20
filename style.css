@@ -224,20 +224,121 @@ section.academic{
 /* experiencia*/
 
 section.experience{
+    display: flex;
+    flex-direction: column;
+    margin-top: 2rem;
+    width: 80vw;
+    align-items: center;
+}
 
+.experience__box {
+    display: flex;
+    align-items: center;    
+}
+
+.experience__info-container {
+    display: flex;
+    flex-direction: column;
+    margin-left: 0.5rem;
+    
+}
+
+.experiencia__botao--repo, .experience__botao--demo {
+    all: unset;
+    border-style: solid;
+    border-width: 0.01rem;
+    padding: 1rem;
+    border-color: #2A7AE4;
+}
+
+.experience__botao--demo.active{
+    background-color: #2A7AE4;
+    color: white;
 }
 
 /*Contacto*/
 
 section.formcontato{
-
+    background-color: #EAF2FD;
+    margin-top: 2rem;
+    width: 100vw;
+    display: flex;
+    justify-content: center;    
 }
+
+.formcontato__contacto {
+    display: flex;
+    padding-top: 5rem;
+    padding-bottom: 5rem;  
+        
+}
+
+.formcontato__text {
+    display: flex;
+    flex-direction: column;
+    margin-left: 1rem;
+    
+}
+
+.formcontato__form {
+    
+    display: flex;
+    flex-direction: column;
+   
+}
+
+.formcontato__input {
+    margin-top: 1rem;
+    height: 5vh;
+}
+
+.formcontato__input::placeholder {
+    /* Firefox, Chrome, Opera */
+    /* text-align: left; */
+    vertical-align:text-top;
+}
+
+.formcontato__input:-ms-input-placeholder {
+    /* Internet Explorer 10-11 */
+    text-align: center;
+}
+
+.formcontato__input::-ms-input-placeholder {
+   /* Microsoft Edge */
+   text-align: center;
+}
+
+.formcontato__textarea {
+    margin-top: 1rem;
+    margin-bottom: 3rem;
+}      
+
+.formcontato__botao {
+    all: unset;
+    width: 8vw;
+    border-style: solid;
+    border-width: 0.01rem;
+    padding: 1rem;
+    background-color: #2A7AE4;
+    color: white;
+    
+}
+
+
 
 /*footeer*/
 
 section.footer{
    
 }
+
+.footer__rodape {
+   display: flex;
+   flex-direction: column;
+   align-items: center; 
+}
+
+
 
 /* Vamos a desafiarnos trabajando con responsividad?
 Utiliza las referencias de los breakpoints @media abajo */
