@@ -40,6 +40,8 @@ con una interfaz de usuario compleja, y permite la reutilización del código ex
 Enlace de la documentación oficial!
 https://en.bem.info/methodology/quick-start/*/
 
+
+
 .tudo {
     display: flex;
     flex-direction: column;
@@ -106,6 +108,8 @@ section.title{
 
 .title__profile {
     border-radius: 50%;
+    width: 18vw;
+    
 }
 
 .title__container {
@@ -115,9 +119,18 @@ section.title{
    
 }
 
+.title__bio {
+    font-size: 1.9rem;
+}
+
+.title__subsection {
+    font-size: 1.6rem;
+}
+
 .title__network {
     display: flex;
     padding-inline-start: 0px;
+    align-items: center;
 }
 
 .title__network__item {
@@ -127,6 +140,22 @@ section.title{
 .bi {
     font-size: 1.3rem;
     color: #2A7AE4;
+}
+
+.title__network__item--descargaCV {
+    all: unset;
+    border-style: solid;
+    border-width: 0.01rem;
+    padding: 1rem;    
+    background-color: #2A7AE4;    
+    color: white;
+    transition: background-color 0.5s;
+    
+}
+
+
+.title__network__item--descargaCV:hover{
+    background-color: red;      
 }
 
 /*Sección About*/
@@ -145,8 +174,14 @@ section.about{
     width: 80vw;
 }
 
+.about__title {
+    font-size: 1.4rem;
+}
+
 .about__paragraph {
     width: 50vw;
+    font-size: 1.2rem;
+    
 }
 
 /*Sección Skills*/
@@ -258,6 +293,10 @@ section.experience{
     align-items: center;    
 }
 
+.experience__img {
+    width: 60vw;
+}
+
 .experience__info-container {
     display: flex;
     flex-direction: column;
@@ -294,20 +333,20 @@ section.formcontato{
 .formcontato__contacto {
     display: flex;
     padding-top: 5rem;
-    padding-bottom: 5rem;  
-        
+    padding-bottom: 5rem;
 }
 
 .formcontato__text {
     display: flex;
     flex-direction: column;
+    margin-left: 1rem;
     
     
 }
 
 .formcontato__subtext {
     font-weight: normal;
-    margin-block-start: 0%;
+    margin-block-start: 1%;
     margin-block-end: 0%;
 }
 
@@ -359,7 +398,7 @@ Utiliza las referencias de los breakpoints @media abajo */
 
 /* Menú */
 section.menu {
-    width: 100vw;
+    width: 90vw;
 }
 
 .menu__list__item {
@@ -451,6 +490,10 @@ section.experience{
     flex-wrap: wrap;    
 }
 
+.experience__img {
+    width: 90vw;
+}
+
 .formcontato__contacto {
     
     width: 100vw;
@@ -502,13 +545,14 @@ section.experience{
 /*Titulo*/
 
 section.title{
-  width: 100vw;
+  width: 90vw;
 }
 
 .title__div {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    
 }
 
 .title__profile {
@@ -524,10 +568,21 @@ section.title{
     font-size: 1rem;
 }
 
+.title__network__item--descargaCV {
+    width: 22vw;
+    font-size: 0.8rem;
+    text-align: center;
+    
+}
+
 /*Sección sobre mi*/
 
 .about__title {
-    font-size: 1.2rem;
+    font-size: 1rem;
+}
+
+.about__paragraph {
+    font-size: 0.8rem;
 }
 
 /*Skills*/
@@ -580,9 +635,9 @@ section.experience{
     font-size: 1.2rem;
 }
 
-.experience__img {
+/* .experience__img {
     width:90vw;
-}
+} */
 
 .experience__title {
     font-size: 1rem;
