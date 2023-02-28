@@ -301,7 +301,7 @@ section.formcontato{
 .formcontato__text {
     display: flex;
     flex-direction: column;
-    margin-left: 1rem;
+    
     
 }
 
@@ -323,21 +323,6 @@ section.formcontato{
     height: 3vh;
 }
 
-/* .formcontato__input::placeholder {
-    
-    vertical-align:text-top;
-}
-
-.formcontato__input:-ms-input-placeholder {
-    
-    text-align: center;
-}
-
-.formcontato__input::-ms-input-placeholder {
-   
-   text-align: center;
-} */
-
 .formcontato__textarea {
     margin-top: 1rem;
     margin-bottom: 3rem;
@@ -354,14 +339,8 @@ section.formcontato{
     
 }
 
-
-
 /*footeer*/
 
-/* section.footer{
-   
-}
- */
 .footer__rodape {
    display: flex;
    flex-direction: column;
@@ -472,16 +451,6 @@ section.experience{
     flex-wrap: wrap;    
 }
 
-/*Contacto*/
-/* section.formcontato{
-    background-color: #EAF2FD;
-    margin-top: 2rem;
-    width: 100vw;
-    display: flex;
-    justify-content: center;
-    align-items: center;    
-} */
-
 .formcontato__contacto {
     
     width: 100vw;
@@ -495,13 +464,6 @@ section.experience{
     display: none;
 }
 
-/* .formcontato__text {
-    display: flex;
-    flex-direction: column;
-    margin-left: 1rem;
-    
-} */
-
 .formcontato__title {
     font-size: 1.3rem;
 }
@@ -510,17 +472,7 @@ section.experience{
     font-size: 1rem;
 }
 
-/* .formcontato__form {
-    
-    display: flex;
-    flex-direction: column;
-   
-} */
 
-/* .formcontato__input {
-    margin-top: 1rem;
-    height: 5vh;
-} */
 
 .formcontato__textarea {
     height: 12vh;
@@ -647,6 +599,13 @@ section.experience{
 }
 
  /*Contacto*/
+
+ .formcontato__text {
+    margin-left: 2vw;
+    margin-right: 2vw;
+}
+
+
 
  .formcontato__botao {    
     width: 27vw;
