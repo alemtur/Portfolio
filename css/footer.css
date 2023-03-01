@@ -1,0 +1,15 @@
+/*footeer*/
+
+.footer__rodape {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/*Mobile*/
+@media screen and (max-width: 425px) {
+  /*Footer*/
+  .footer__rodape {
+    font-size: 0.8rem;
+  }
+}
