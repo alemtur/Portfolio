@@ -1,4 +1,4 @@
-export function valida(input) {
+export function validaInputs(input) {
   const tipoDeInput = input.dataset.tipo;
   if (validadores[tipoDeInput]) {
     validadores[tipoDeInput](input);
@@ -14,6 +14,22 @@ export function valida(input) {
   }
 }
 
+export function validaTextAreas(textarea) {
+  const tipoDeInput = textarea.dataset.tipo;
+  if (validadores[tipoDeInput]) {
+    validadores[tipoDeInput](textarea);
+  }
+
+  if (textarea.validity.valid) {
+    textarea.parentElement.classList.remove("input-container--invalid");
+    textarea.parentElement.querySelector(".input-message-error").innerHTML = "";
+  } else {
+    textarea.parentElement.classList.add("input-container--invalid");
+    textarea.parentElement.querySelector(".input-message-error").innerHTML =
+      mostrarMensajeDeError(tipoDeInput, textarea);
+  }
+}
+
 const tipoDeErrores = [
   "valueMissing",
   "typeMismatch",
@@ -23,34 +39,31 @@ const tipoDeErrores = [
 
 const mensajesDeError = {
   nombre: {
-    valueMissing: "El campo nombre no puede estar vacío",
+    valueMissing: "El campo nombre no puede estar vacío.",
   },
   email: {
-    valueMissing: "El campo correo no puede estar vacío",
+    valueMissing: "El campo correo no puede estar vacío.",
     typeMismatch: "El correo no es válido",
   },
   asunto: {
-    valueMissing: "Este campo no puede estar vacío",
-    customError: "Debes tener al menos 18 años de edad",
+    valueMissing: "El campo asunto no puede estar vacío.",
   },
   mensaje: {
-    valueMissing: "Este campo no puede estar vacío",
-    patternMismatch: "El formato requerido es XXXXXXXXXX 10 números",
+    valueMissing: "El campo mensaje no puede estar vacío.",
   },
-  
 };
 
-/* const validadores = {
+const validadores = {
   nacimiento: (input) => validarNacimiento(input),
-}; */
+};
 
 function mostrarMensajeDeError(tipoDeInput, input) {
   let mensaje = "";
   tipoDeErrores.forEach((error) => {
     if (input.validity[error]) {
-      /* console.log(tipoDeInput, error);
+      console.log(tipoDeInput, error);
       console.log(input.validity[error]);
-      console.log(mensajesDeError[tipoDeInput][error]); */
+      console.log(mensajesDeError[tipoDeInput][error]);
       mensaje = mensajesDeError[tipoDeInput][error];
     }
   });
@@ -66,8 +79,8 @@ function mostrarMensajeDeError(tipoDeInput, input) {
 
   input.setCustomValidity(mensaje);
 }
- */
-/* function mayorDeEdad(fecha) {
+
+function mayorDeEdad(fecha) {
   const fechaActual = new Date();
   const diferenciaFechas = new Date(
     fecha.getUTCFullYear() + 18,

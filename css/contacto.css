@@ -31,15 +31,28 @@ section.formcontato {
   flex-direction: column;
 }
 
+.input-container {
+    
+    display: flex;
+    flex-direction: column;
+    
+  }
+
+
 .formcontato__input {
-  margin-top: 1rem;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
   height: 3vh;
 }
 
 .formcontato__textarea {
-  height: 16vh;
-  margin-top: 1rem;
-  margin-bottom: 5rem;
+  height: 10vh;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.input-message-error {
+  color: red;
 }
 
 .formcontato__botao {
@@ -47,6 +60,7 @@ section.formcontato {
   width: 9vw;
   border-style: solid;
   border-width: 0.01rem;
+  margin-top: 5rem;
   padding: 1rem;
   background-color: #2a7ae4;
   color: white;
@@ -72,13 +86,7 @@ section.formcontato {
 
   .formcontato__subtext {
     font-size: 1rem;
-  }
-
-  .formcontato__textarea {
-    height: 12vh;
-    margin-top: 1rem;
-    margin-bottom: 1.7rem;
-  }
+  } 
 
   .formcontato__botao {
     width: 16vw;
