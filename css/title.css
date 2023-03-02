@@ -30,6 +30,11 @@ section.title {
   font-size: 1.6rem;
 }
 
+.title_link {  
+  color:blue;
+  text-decoration: underline;
+}
+
 .title__network {
   display: flex;
   padding-inline-start: 0px;
@@ -41,12 +46,15 @@ section.title {
 }
 
 .bi {
-  font-size: 1.3rem;
+  font-size: 2rem;
   color: #2a7ae4;
 }
 
 .title__network__item--descargaCV {
   all: unset;
+  width: 20vw;
+  font-size: 1.4rem;
+  text-align: center;
   border-style: solid;
   border-width: 0.01rem;
   padding: 1rem;
@@ -70,8 +78,17 @@ section.title {
 
   .title__profile {
     width: 22vw;
-    height: 15vh;
+    height: 14vh;
   }
+
+  .bi {
+    font-size: 1.8rem;
+  }
+}
+
+.title__network__item--descargaCV {
+  width: 16vw;
+  font-size: 1.1rem;
 }
 
 /*Mobile*/
@@ -101,8 +118,12 @@ section.title {
     font-size: 1rem;
   }
 
+  .bi {
+    font-size: 1.2rem;
+  }
+
   .title__network__item--descargaCV {
-    width: 20vw;
+    width: 16vw;
     font-size: 0.7rem;
     text-align: center;
   }

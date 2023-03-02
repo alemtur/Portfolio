@@ -3,6 +3,7 @@ import { validaInputs, validaTextAreas } from "./validaciones.js";
 
 const inputs = document.querySelectorAll("input");
 const textareas = document.querySelectorAll("textarea");
+const botonDescargaCv = document.querySelector(".title__network__item--descargaCV")
 
 inputs.forEach((input) => {
   input.addEventListener("blur", (input) => {
@@ -15,4 +16,10 @@ textareas.forEach((textarea) => {
     validaTextAreas(textarea.target);
   });
 });
+
+
+botonDescargaCv.addEventListener("click", () => {
+    window.open('./assets/cv/CV - Alejandro Turtola.pdf');
+});
+
 

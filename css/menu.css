@@ -15,7 +15,8 @@ header.menu__header {
 }
 
 .menu__icono {
-  height: 22px;
+  height: 20px;
+  border-radius: 50%;
 }
 
 .menu__title {
@@ -60,6 +61,10 @@ header.menu__header {
 /*Mobile*/
 @media screen and (max-width: 425px) {
   /*Menu*/
+
+  .menu__icono {
+    height: 15px;
+  }
 
   .menu__title {
     font-size: 0.8rem;

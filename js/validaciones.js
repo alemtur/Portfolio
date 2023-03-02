@@ -3,14 +3,17 @@ export function validaInputs(input) {
   if (validadores[tipoDeInput]) {
     validadores[tipoDeInput](input);
   }
-
+  
   if (input.validity.valid) {
     input.parentElement.classList.remove("input-container--invalid");
     input.parentElement.querySelector(".input-message-error").innerHTML = "";
+    input.style.background = "lightgreen";    
   } else {
     input.parentElement.classList.add("input-container--invalid");
     input.parentElement.querySelector(".input-message-error").innerHTML =
       mostrarMensajeDeError(tipoDeInput, input);
+    input.style.background = "#FBCDCB";
+         
   }
 }
 
@@ -23,12 +26,26 @@ export function validaTextAreas(textarea) {
   if (textarea.validity.valid) {
     textarea.parentElement.classList.remove("input-container--invalid");
     textarea.parentElement.querySelector(".input-message-error").innerHTML = "";
+    textarea.style.background = "lightgreen"; 
   } else {
     textarea.parentElement.classList.add("input-container--invalid");
     textarea.parentElement.querySelector(".input-message-error").innerHTML =
       mostrarMensajeDeError(tipoDeInput, textarea);
+    textarea.style.background = "#FBCDCB";  
   }
 }
+const input = document.querySelector(".formcontato__input");
+const textarea = document.querySelector(".formcontato__textarea");
+const botonEnviar = document.querySelector(".formcontato__botao");
+botonEnviar.addEventListener("click", () => {
+  if(input.value=="" && textarea.value=="") {
+    alert("No se puede enviar el mensaje. Todos los campos son obligatorios.");
+  } else {
+    alert("El mensaje ha sido enviado.");
+    input.innerHTML=="";
+    textarea.innerHTML=="";
+  }
+});
 
 const tipoDeErrores = [
   "valueMissing",
@@ -61,32 +78,9 @@ function mostrarMensajeDeError(tipoDeInput, input) {
   let mensaje = "";
   tipoDeErrores.forEach((error) => {
     if (input.validity[error]) {
-      console.log(tipoDeInput, error);
-      console.log(input.validity[error]);
-      console.log(mensajesDeError[tipoDeInput][error]);
       mensaje = mensajesDeError[tipoDeInput][error];
     }
   });
   return mensaje;
 }
 
-/* function validarNacimiento(input) {
-  const fechaCliente = new Date(input.value);
-  let mensaje = "";
-  if (!mayorDeEdad(fechaCliente)) {
-    mensaje = "Debes tener al menos 18 años de edad";
-  }
-
-  input.setCustomValidity(mensaje);
-}
-
-function mayorDeEdad(fecha) {
-  const fechaActual = new Date();
-  const diferenciaFechas = new Date(
-    fecha.getUTCFullYear() + 18,
-    fecha.getUTCMonth(),
-    fecha.getUTCDate()
-  );
-  return diferenciaFechas <= fechaActual;
-}
- */
